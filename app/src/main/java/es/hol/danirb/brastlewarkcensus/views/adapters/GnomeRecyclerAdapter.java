@@ -18,8 +18,8 @@ import es.hol.danirb.brastlewarkcensus.models.Gnome;
 
 public class GnomeRecyclerAdapter extends RecyclerView.Adapter<GnomeRecyclerAdapter.GnomeViewHolder> implements View.OnClickListener {
 
-    private List<Gnome> listGnomes;
-    private Context mContext;
+    private final List<Gnome> listGnomes;
+    private final Context mContext;
     private View.OnClickListener listener;
 
     public GnomeRecyclerAdapter(List<Gnome> listGnomes, Context context) {

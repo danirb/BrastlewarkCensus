@@ -9,10 +9,10 @@ import retrofit.Retrofit;
 /**
  * Created by dani on 17/11/15.
  */
-public class ServiceGenerator {
-    private static String API_BASE_URL = "http://alt17android.hol.es";
-    private static OkHttpClient httpClient = new OkHttpClient();
-    private static Retrofit.Builder builder =
+class ServiceGenerator {
+    private static final String API_BASE_URL = "http://alt17android.hol.es";
+    private static final OkHttpClient httpClient = new OkHttpClient();
+    private static final Retrofit.Builder builder =
             new Retrofit.Builder()
                     .baseUrl(API_BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create());

@@ -13,7 +13,7 @@ import es.hol.danirb.brastlewarkcensus.R;
 import es.hol.danirb.brastlewarkcensus.models.Gnome;
 
 public class GnomeDetails extends AppCompatActivity {
-    Gnome gnome;
+    private Gnome gnome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

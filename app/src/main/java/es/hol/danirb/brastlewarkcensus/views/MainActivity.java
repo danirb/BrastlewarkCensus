@@ -30,12 +30,11 @@ import es.hol.danirb.brastlewarkcensus.network.GetCesus;
 import es.hol.danirb.brastlewarkcensus.views.adapters.GnomeRecyclerAdapter;
 
 public class MainActivity extends AppCompatActivity {
+    private final List<Gnome> gnomesTemp = new ArrayList<>();
     private RecyclerView rv;
     private MenuItem mSearchAction;
     private boolean isSearchOpened = false;
     private EditText edtSeach;
-    private List<Gnome> gnomesTemp = new ArrayList<>();
-    private List<Gnome> gnomes;
     private Context context;
     private GetCesus g;
     @Override
@@ -44,19 +43,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        context = this;
+
+        setRecycler();
+        getCensusAsynk();
+
+        //TODO: Implement search with fav button
+    }
+
+    private void getCensusAsynk() {
+        g = new GetCesus(this, rv);
+        g.execute();
+    }
+
+    private void setRecycler() {
         rv = (RecyclerView) findViewById(R.id.rv_gnomelist);
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        context = this;
-        g = new GetCesus(this, rv);
-        g.execute();
-        gnomes = new ArrayList<>();
-
-//
     }
 
 
     public void handleMenuSearch() {
+        //TODO: fix focus
         ActionBar action = getSupportActionBar();
         if (isSearchOpened) {
             action.setDisplayShowCustomEnabled(false);

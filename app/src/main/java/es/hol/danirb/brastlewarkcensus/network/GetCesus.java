@@ -23,7 +23,7 @@ import retrofit.Call;
  * Created by dani on 9/01/16.
  */
 public class GetCesus extends AsyncTask<Void, Context, List<Gnome>> {
-    private final RecyclerView rv;
+    private RecyclerView rv;
     private Context context;
     private ProgressDialog pDialog;
     private Brastlewark br;
