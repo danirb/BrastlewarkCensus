@@ -6,4 +6,12 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
+
+    <style name="fav_button">
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:clickable">true</item>
+    </style>
 </resources>

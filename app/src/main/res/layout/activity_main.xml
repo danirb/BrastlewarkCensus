@@ -21,13 +21,18 @@
 
     </android.support.design.widget.AppBarLayout>
 
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_gnomelist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:layout_marginTop="@dimen/rv_margin" />
 
-    </android.support.v7.widget.RecyclerView>
-
-
+    <android.support.design.widget.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/btn_search"
+        style="@style/fav_button"
+        android:layout_gravity="end|bottom"
+        app:layout_anchor="@id/rv_gnomelist"
+        app:layout_anchorGravity="end|bottom|right"
+        app:layout_behavior="es.hol.danirb.brastlewarkcensus.utils.FABScrollAnimation" />
 </android.support.design.widget.CoordinatorLayout>

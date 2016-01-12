@@ -1,18 +1,13 @@
 package es.hol.danirb.brastlewarkcensus.models;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * Created by dani on 9/01/16.
- */
-public class Gnome implements Serializable{
+
+public class Gnome implements Serializable {
     private int id;
     private String name;
-    private String picture;
+    private String thumbnail;
     private int age;
     private double weight;
     private double height;
@@ -20,8 +15,17 @@ public class Gnome implements Serializable{
     private List<String> professions;
     private List<String> friends;
 
-    public Gnome() {
-
+    public Gnome(int id, String name, String thumbnail, int age, double weight,
+                 double height, String hair_color, List<String> professions, List<String> friends) {
+        this.id = id;
+        this.name = name;
+        this.thumbnail = thumbnail;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+        this.hair_color = hair_color;
+        this.professions = professions;
+        this.friends = friends;
     }
 
     public int getId() {
@@ -41,11 +45,11 @@ public class Gnome implements Serializable{
     }
 
     public String getPicture() {
-        return picture;
+        return thumbnail;
     }
 
     public void setPicture(String picture) {
-        this.picture = picture;
+        this.thumbnail = picture;
     }
 
     public int getAge() {
@@ -101,7 +105,7 @@ public class Gnome implements Serializable{
         return "Gnome{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", picture='" + picture + '\'' +
+                ", thumbnail='" + thumbnail + '\'' +
                 ", age=" + age +
                 ", weight=" + weight +
                 ", height=" + height +
