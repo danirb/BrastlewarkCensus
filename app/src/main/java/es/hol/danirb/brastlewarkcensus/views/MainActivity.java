@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -80,21 +79,21 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    Log.d("BUSCANDO", s.toString());
                     gnomesTemp.clear();
                     for (Gnome gnome : g.getBr().getGnomeList()) {
-                        if (gnome.getName().toLowerCase().contains(s)) {
-                            Log.d("BUSCANDO", "Articulo:" + gnome.getName());
+                        if (gnome.getName().toLowerCase().contains(s.toString().toLowerCase())) {
                             gnomesTemp.add(gnome);
                         }
                     }
                     rv.setAdapter(new GnomeRecyclerAdapter(gnomesTemp, context));
                     rv.getAdapter().notifyDataSetChanged();
+
+
                 }
 
                 @Override
                 public void afterTextChanged(Editable s) {
-                    Log.d("BUSCANDO", "DESPUES" + s.toString());
+
                 }
             });
 
@@ -113,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
                             .actionBarSize());
 
             isSearchOpened = true;
+
         }
     }
 

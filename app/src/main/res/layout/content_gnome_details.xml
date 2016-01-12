@@ -8,10 +8,159 @@
     tools:context="es.hol.danirb.brastlewarkcensus.views.GnomeDetails"
     tools:showIn="@layout/activity_gnome_details">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/gnome_details_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/id" />
+
+            <TextView
+                android:id="@+id/gnome_details_id_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:layout_toRightOf="@+id/gnome_details_age" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/gnome_details_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/age" />
+
+            <TextView
+                android:id="@+id/gnome_details_age_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:layout_toRightOf="@+id/gnome_details_age" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/age"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/gnome_details_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/height" />
+
+            <TextView
+                android:id="@+id/gnome_details_height_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:layout_toRightOf="@+id/gnome_details_height" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/height"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/gnome_details_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/weight" />
+
+            <TextView
+                android:id="@+id/gnome_details_weight_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:layout_toRightOf="@+id/gnome_details_weight" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weight"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/gnome_details_hair_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:text="@string/hair_color" />
+
+            <TextView
+                android:id="@+id/gnome_details_hair_color_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_margin"
+                android:layout_toRightOf="@+id/gnome_details_hair_color" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hair"
+            android:layout_centerHorizontal="true"
+            android:text="@string/friends"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/friends_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/friends"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/works"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/friends_list"
+            android:layout_centerHorizontal="true"
+            android:text="@string/works"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/works_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/works"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
 
 </android.support.v4.widget.NestedScrollView>

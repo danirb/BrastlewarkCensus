@@ -39,8 +39,8 @@ public class GnomeRecyclerAdapter extends RecyclerView.Adapter<GnomeRecyclerAdap
         Gnome gnome = listGnomes.get(position);
         holder.gnomeName.setText(gnome.getName());
         holder.gnomeAge.setText(String.valueOf(gnome.getAge()));
-        holder.gnomeWeight.setText(String.valueOf((int) gnome.getWeight()));
-        holder.gnomeHeight.setText(String.valueOf((int) gnome.getHeight()));
+        holder.gnomeWeight.setText(String.valueOf(gnome.getWeight()));
+        holder.gnomeHeight.setText(String.valueOf(gnome.getHeight()));
         holder.gnomeHairColor.setText(gnome.getHair_color());
 
         Picasso.with(mContext)
