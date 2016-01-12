@@ -33,6 +33,85 @@
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gnome_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/gnome_picture"
+            android:text="@string/age"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/gnome_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gnome_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/age"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/age"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/gnome_picture"
+            android:text="@string/weight"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/gnome_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gnome_age"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/weight"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weight"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/gnome_picture"
+            android:text="@string/height"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/gnome_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gnome_weight"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/height"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/hair_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/height"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/gnome_picture"
+            android:text="@string/hair_color"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/gnome_hair_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gnome_height"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/hair_color"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </RelativeLayout>
 

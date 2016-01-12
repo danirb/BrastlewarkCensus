@@ -16,10 +16,11 @@ import es.hol.danirb.brastlewarkcensus.R;
 import es.hol.danirb.brastlewarkcensus.models.Gnome;
 
 
-public class GnomeRecyclerAdapter extends RecyclerView.Adapter<GnomeRecyclerAdapter.GnomeViewHolder> {
+public class GnomeRecyclerAdapter extends RecyclerView.Adapter<GnomeRecyclerAdapter.GnomeViewHolder> implements View.OnClickListener {
 
     private List<Gnome> listGnomes;
     private Context mContext;
+    private View.OnClickListener listener;
 
     public GnomeRecyclerAdapter(List<Gnome> listGnomes, Context context) {
         this.listGnomes = listGnomes;
@@ -29,6 +30,7 @@ public class GnomeRecyclerAdapter extends RecyclerView.Adapter<GnomeRecyclerAdap
     @Override
     public GnomeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_gnome, parent, false);
+        v.setOnClickListener(this);
         return new GnomeViewHolder(v);
     }
 
@@ -36,6 +38,11 @@ public class GnomeRecyclerAdapter extends RecyclerView.Adapter<GnomeRecyclerAdap
     public void onBindViewHolder(GnomeViewHolder holder, int position) {
         Gnome gnome = listGnomes.get(position);
         holder.gnomeName.setText(gnome.getName());
+        holder.gnomeAge.setText(String.valueOf(gnome.getAge()));
+        holder.gnomeWeight.setText(String.valueOf((int) gnome.getWeight()));
+        holder.gnomeHeight.setText(String.valueOf((int) gnome.getHeight()));
+        holder.gnomeHairColor.setText(gnome.getHair_color());
+
         Picasso.with(mContext)
                 .load(gnome.getPicture())
                 .fit().centerCrop()
@@ -48,7 +55,21 @@ public class GnomeRecyclerAdapter extends RecyclerView.Adapter<GnomeRecyclerAdap
         return listGnomes.size();
     }
 
+    @Override
+    public void onClick(View v) {
+        if (listener != null)
+            listener.onClick(v);
+    }
+
+    public void setOnClickListener(View.OnClickListener listener) {
+        this.listener = listener;
+    }
+
     public class GnomeViewHolder extends RecyclerView.ViewHolder {
+        final TextView gnomeAge;
+        final TextView gnomeWeight;
+        final TextView gnomeHeight;
+        final TextView gnomeHairColor;
         final TextView gnomeName;
         final ImageView gnomePicture;
 
@@ -56,6 +77,11 @@ public class GnomeRecyclerAdapter extends RecyclerView.Adapter<GnomeRecyclerAdap
             super(itemView);
             gnomePicture = (ImageView) itemView.findViewById(R.id.gnome_picture);
             gnomeName = (TextView) itemView.findViewById(R.id.gnome_name);
+            gnomeAge = (TextView) itemView.findViewById(R.id.gnome_age);
+            gnomeHeight = (TextView) itemView.findViewById(R.id.gnome_height);
+            gnomeWeight = (TextView) itemView.findViewById(R.id.gnome_weight);
+            gnomeHairColor = (TextView) itemView.findViewById(R.id.gnome_hair_color);
+
         }
     }
 }

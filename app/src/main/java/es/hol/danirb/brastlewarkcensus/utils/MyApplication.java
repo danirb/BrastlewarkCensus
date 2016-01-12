@@ -1,4 +1,4 @@
-package es.hol.danirb.brastlewarkcensus.views;
+package es.hol.danirb.brastlewarkcensus.utils;
 
 import android.app.Application;
 
